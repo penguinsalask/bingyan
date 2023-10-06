@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,10 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2070298873
+    locked: 0
+  - name: UI
+    uniqueID: 2062928589
+    locked: 0
+  - name: weapon
+    uniqueID: 2038895739
     locked: 0

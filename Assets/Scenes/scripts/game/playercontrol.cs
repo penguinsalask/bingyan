@@ -31,7 +31,7 @@ public class playercontrol : MonoBehaviour, BeAttack
     public float dpCD1 = 1f;
     public float dpCD2 = 0.5f;
 
-    public GameObject playerPrefab;
+    public GameObject player;
     private Vector3 playerScale;
     public bool isDie;
     private Rigidbody2D myRigidbody;
@@ -57,7 +57,7 @@ public class playercontrol : MonoBehaviour, BeAttack
     }
     private void Start()
     {
-        myPlayer = playerPrefab;
+        myPlayer = player;
         playerScale = myPlayer.transform.localScale;
         playerAnima = myPlayer.GetComponent<Animator>();
         myRigidbody = transform.GetComponent<Rigidbody2D>();
@@ -192,11 +192,11 @@ public class playercontrol : MonoBehaviour, BeAttack
     {
         if (myRigidbody.position.x > target.x)
         {
-            myPlayer.transform.localScale = new Vector3(-playerScale.x, playerScale.y, playerScale.z);
+            transform.localScale = new Vector3(-playerScale.x, playerScale.y, playerScale.z);
         }
         else if (myRigidbody.position.x < target.x)
         {
-            myPlayer.transform.localScale = playerScale;
+            transform.localScale = playerScale;
         }
         if (weapon != null)
         {
